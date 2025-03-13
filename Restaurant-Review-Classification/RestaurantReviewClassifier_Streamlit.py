@@ -20,8 +20,18 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(script_dir, 'Restaurant_review_model.joblib')
 model = joblib.load(model_path) 
 vectorizer_path = os.path.join(script_dir, 'count_v_res.joblib')
+
+# Check if files exist
+if not os.path.exists(model_path):
+    raise FileNotFoundError(f"Model file '{model_path}' not found!")
+if not os.path.exists(vectorizer_path):
+    raise FileNotFoundError(f"Vectorizer file '{vectorizer_path}' not found!")
+
+
 vectorizer = joblib.load(vectorizer_path)
 # check
+
+
 # vectorizer = joblib.load('count_v_res.joblib')
 
 def preprocess_text(text):
