@@ -6,8 +6,8 @@ from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import CountVectorizer
 
 # Load the pre-trained model and vectorizer
-model = joblib.load('/Restaurant_review_model.joblib')
-vectorizer = joblib.load('/count_v_res.joblib')
+model = joblib.load('Restaurant_review_model.joblib')
+vectorizer = joblib.load('count_v_res.joblib')
 
 def preprocess_text(text):
     custom_stopwords = {'don', "don't", 'ain', 'aren', "aren't", 'couldn', "couldn't",
