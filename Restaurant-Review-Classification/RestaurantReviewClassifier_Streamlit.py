@@ -18,8 +18,9 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Construct the absolute path to the model
 model_path = os.path.join(script_dir, 'Restaurant_review_model.joblib')
+model = joblib.load(script_dir)
 vectorizer_path = os.path.join(script_dir, 'count_v_res.joblib')
-
+vectorizer = joblib.load(vectorizer_path)
 # check
 # vectorizer = joblib.load('count_v_res.joblib')
 
