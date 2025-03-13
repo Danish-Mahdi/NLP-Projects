@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import joblib
 import re
@@ -6,7 +7,15 @@ from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import CountVectorizer
 
 # Load the pre-trained model and vectorizer
-model = joblib.load('Restaurant_review_model.joblib')
+# model = joblib.load('Restaurant_review_model.joblib')
+# check
+# Get the current script directory
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the absolute path to the model
+model_path = os.path.join(script_dir, 'Restaurant_review_model.joblib')
+
+# check
 vectorizer = joblib.load('count_v_res.joblib')
 
 def preprocess_text(text):
