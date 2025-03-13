@@ -6,6 +6,8 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import CountVectorizer
 
+nltk.download('stopwords')  
+
 # Load the pre-trained model and vectorizer
 # model = joblib.load('Restaurant_review_model.joblib')
 
