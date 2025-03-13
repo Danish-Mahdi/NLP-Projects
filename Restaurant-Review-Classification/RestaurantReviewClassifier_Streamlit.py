@@ -6,11 +6,7 @@ from nltk.stem import PorterStemmer
 from sklearn.feature_extraction.text import CountVectorizer
 
 # Load the pre-trained model and vectorizer
-# model = joblib.load('Restaurant_review_model.joblib')
-
-model_path = "/mount/src/nlp-projects/Restaurant-Review-Classification/Restaurant_review_model.joblib"
-model = joblib.load(model_path)
-
+model = joblib.load('Restaurant_review_model.joblib')
 vectorizer = joblib.load('count_v_res.joblib')
 
 def preprocess_text(text):
